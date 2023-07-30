@@ -1,7 +1,7 @@
 name: Use the data
 run-name: ${{ github.actor }} is testing out Download Artifact 🚀
 on:
-  workflow_dispatch:
+  workflow_run:
     workflows: [Upload data]
     types:
       - completed
