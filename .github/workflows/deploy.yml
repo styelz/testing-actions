@@ -1,0 +1,13 @@
+name: GitHub Actions - Download Artifact
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [workflow_dispatch]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/download-artifact@v3
+      with:
+        name: my-artifact
+    - name: Display structure of downloaded files
+      run: ls -R
