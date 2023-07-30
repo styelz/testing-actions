@@ -1,7 +1,7 @@
 name: Upload data
 run-name: ${{ github.actor }} is testing out Upload Artifact 🚀
 on:
-  pull_request:
+  push:
 jobs:
   upload:
     runs-on: ubuntu-latest
