@@ -10,5 +10,6 @@ jobs:
     - uses: actions/download-artifact@v3
       with:
         name: my-artifact-${{ github.sha }}
+        workflow: build.yml
     - name: Display structure of downloaded files
       run: ls -lR
