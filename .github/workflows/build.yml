@@ -14,5 +14,5 @@ jobs:
           echo $PR_NUMBER > ./data/test.data
       - uses: actions/upload-artifact@v3
         with:
-          name: artifact_name
+          name: test_artifact
           path: data/
