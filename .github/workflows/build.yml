@@ -1,4 +1,4 @@
-name: Upload data
+name: Build and Create Artifact
 run-name: ${{ github.actor }} is testing out Upload Artifact 🚀
 on:
   push:
