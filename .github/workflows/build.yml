@@ -12,6 +12,7 @@ jobs:
         run: |
           mkdir -p ./data
           echo $PR_NUMBER > ./data/test.data
+          ls -lR
       - uses: actions/upload-artifact@v3
         with:
           name: test_artifact
