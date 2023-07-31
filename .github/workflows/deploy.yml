@@ -12,7 +12,7 @@ jobs:
         OTHER_REPO="styelz/testing-actions"
         WF_NAME="build.yml"
         ARTIFACT_NAME="test_artifact"
-        RUN_ID=`gh run --repo ${OTHER_REPO} list --workflow ${WF_NAME} --json databaseId --jq .[0].databaseId`
+        RUN_ID=`gh run --repo ${OTHER_REPO} list --workflow ${WF_NAME} --json databaseId --jq .[0].databaseId``
         gh run --repo ${OTHER_REPO} download ${RUN_ID} -n ${ARTIFACT_NAME}
       env:
         GITHUB_TOKEN: ${{ secrets.ARTIFACT_DEPLOY_TOKEN }}
