@@ -8,14 +8,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3    
-      - name: Create Data
-        env:
-          PR_NUMBER: ${{ github.event.number }}
-        run: |
-          mkdir -p ./data
-          echo $PR_NUMBER > ./data/test.data
-          ls -lR
       - uses: actions/upload-artifact@v3
         with:
           name: test_artifact
-          path: data/
+          path: /
