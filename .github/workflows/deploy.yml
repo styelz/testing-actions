@@ -15,5 +15,5 @@ jobs:
         RUN_ID=`gh run --repo ${OTHER_REPO} list --workflow ${WF_NAME} --json databaseId --jq .[0].databaseId`
         gh run --repo ${OTHER_REPO} download ${RUN_ID} -n ${ARTIFACT_NAME}
         cat README.md
-      #env:
-      #  GITHUB_TOKEN: ${{ secrets.ARTIFACT_DEPLOY_TOKEN }}
+      env:
+        GH_TOKEN: ${{ github.token }}
