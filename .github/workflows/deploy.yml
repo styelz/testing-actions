@@ -9,6 +9,7 @@ jobs:
     steps:
     - name: "Download artifact"
       run: |
+        rm -rf *
         OTHER_REPO="styelz/testing-actions"
         WF_NAME="build.yml"
         ARTIFACT_NAME="test_artifact"
