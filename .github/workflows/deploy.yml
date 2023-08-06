@@ -13,7 +13,8 @@ jobs:
         WF_NAME="build.yml"
         ARTIFACT_NAME="test_artifact"
         RUN_ID=`gh run --repo ${OTHER_REPO} list --workflow ${WF_NAME} --json databaseId --jq .[0].databaseId`
-        gh run --repo ${OTHER_REPO} download --clobber ${RUN_ID} -n ${ARTIFACT_NAME}
+        rm -rf .??* *
+        gh run --repo ${OTHER_REPO} download ${RUN_ID} -n ${ARTIFACT_NAME}
         cat README.md
       env:
         GH_TOKEN: ${{ github.token }}
