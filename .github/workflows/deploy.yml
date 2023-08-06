@@ -13,7 +13,7 @@ jobs:
         WF_NAME="build.yml"
         ARTIFACT_NAME="test_artifact"
         RUN_ID=`gh run --repo ${OTHER_REPO} list --workflow ${WF_NAME} --json databaseId --jq .[0].databaseId`
-        rm -rf ../${ARTIFACT_NAME}
+        rm -rf . 2>/dev/null
         gh run --repo ${OTHER_REPO} download ${RUN_ID} -n ${ARTIFACT_NAME}
         cat README.md
       env:
