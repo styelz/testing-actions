@@ -1,4 +1,4 @@
-name: Download Built Artifact
+name: Download artifact
 run-name: ${{ github.actor }} is testing out Download Artifact 🚀
 on:
   workflow_dispatch:
