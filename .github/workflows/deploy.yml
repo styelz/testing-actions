@@ -5,7 +5,8 @@ on:
 
 jobs:
   download:
-    runs-on: [Linode]
+    #runs-on: [Linode]
+    runs-on: ubuntu-latest
     steps:
     - name: "Download artifact"
       run: |
